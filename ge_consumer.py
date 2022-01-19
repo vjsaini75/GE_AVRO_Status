@@ -12,7 +12,7 @@ schema = avro.schema.parse(open(file ,"rb").read())
 reader = avro.io.DatumReader(schema)
 
 consumer = KafkaConsumer(
-    'vku-tst',
+    'scada-status',
      bootstrap_servers=['10.0.0.4:9092'],
      group_id = 'vijay08',
      auto_offset_reset='earliest')
@@ -27,4 +27,5 @@ for message in consumer:
     bytes_reader = io.BytesIO(message)
     decoder = avro.io.BinaryDecoder(bytes_reader)
     print(reader.read(decoder))
+    reader.read(decoder).id
     consumer.commit()

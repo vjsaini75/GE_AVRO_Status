@@ -20,12 +20,12 @@ encoder = avro.io.BinaryEncoder(bytes_writer)
 producer = kafka.KafkaProducer(bootstrap_servers=['10.0.0.4:9092']
                          )
 
-writer.write({"id": "15986c5f-e164-4b3d-8a7a-e959feda71c5", "name": "AVC.DK1.IDU.AVC4", "value": 10, "quality1":10, "quality2": 20, "time": 10},encoder)
+writer.write({"id": "15986c5f-e164-4b3d-8a7a-e959feda71c9", "name": "AVC.DK1.IDU.AVC9", "value": 20, "quality1":10, "quality2": 20, "time": 10},encoder)
 raw_bytes = bytes_writer.getvalue()
 
 print(raw_bytes)
 try:
- producer.send('vku-tst',raw_bytes)
+ producer.send('scada-status',raw_bytes)
  producer.flush()
 except:
  print("error")   
