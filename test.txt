@@ -4,4 +4,8 @@ chang3
 change4
 change5
 brach rebase_test
+<<<<<<< HEAD
 branch rebase_test 2
+=======
+branch rebase_test change2
+>>>>>>> e0e9a1e1554ae52674794f4b87512bbc86a73170
