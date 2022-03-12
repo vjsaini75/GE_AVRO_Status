@@ -1,3 +1,4 @@
 file3 3 head on branch3
 file3 3 head on branch4
 change1 from beanch stage_test
+change2 from brach state_test
