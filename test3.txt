@@ -1,3 +1,7 @@
 file3 3 head on branch3
 file3 3 head on branch4
+<<<<<<< HEAD
 change 1 from main branch
+=======
+change1 from beanch stage_test
+>>>>>>> change 1 from stage_test
